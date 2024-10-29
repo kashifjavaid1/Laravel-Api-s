@@ -11,6 +11,17 @@ class UserController extends Controller
     }
 
     function createUser(Request $req){
-       return "add user";
+//    instance create
+$userCreate=new User();
+$userCreate->name=$req->name;
+$userCreate->email=$req->email;
+$userCreate->phone=$req->phone;
+if ($userCreate->save()) {
+  return $userCreate;
+    }else{
+        return "User Not Create";
     }
+}
+
+
 }
