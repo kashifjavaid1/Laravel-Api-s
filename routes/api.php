@@ -24,4 +24,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get("user",[UserController::class,"getUser"]);
+Route::get("single/{id}",[UserController::class,"singleUser"]);
 Route::post("add-user",[UserController::class,"createUser"]);
+Route::put("edit-user/{id}", [UserController::class, "userUpdate"]);
