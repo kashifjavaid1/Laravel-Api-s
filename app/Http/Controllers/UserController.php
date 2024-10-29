@@ -49,4 +49,27 @@ function userUpdate(Request $request,$id){
     }
 }
 
+// Delete User 
+// param pass id 
+function DeleteUser($id){
+  $student=User::destroy($id);
+  if ($student) {
+    return "Student sucessfull deleted";
+  }
+  else{
+    return "Student failed deleted";
+  }
+}
+
+// Multiple Deleted
+function MultipleDelete(Request $req){
+    $ids=$req->ids;
+    $student=User::destroy($ids);
+    if ($student) {
+        return "Student sucessfull deleted";
+      }
+      else{
+        return "Student failed deleted";
+      }
+}
 }
