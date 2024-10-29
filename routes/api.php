@@ -29,3 +29,4 @@ Route::post("add-user",[UserController::class,"createUser"]);
 Route::patch("edit-user/{id}", [UserController::class, "userUpdate"]);
 Route::delete("delete/{id}", [UserController::class, "DeleteUser"]);
 Route::delete("multiple-delete", [UserController::class, "MultipleDelete"]);
+Route::get("search/{name}", [UserController::class, "searchApi"]);

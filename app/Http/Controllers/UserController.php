@@ -72,4 +72,10 @@ function MultipleDelete(Request $req){
         return "Student failed deleted";
       }
 }
+
+// search Api 
+function searchApi(Request $request,$name){
+    $student=User::where("name","like","%$name%")->get();
+    return $student;
+}
 }
