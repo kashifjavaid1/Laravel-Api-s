@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Validator;
 class UserController extends Controller
 {
     function getUser(){
@@ -13,6 +14,15 @@ class UserController extends Controller
 
     //  Create User Post request
     function createUser(Request $req){
+        $rule=array(
+            'name' => 'required|min:5|max:20',
+    'email' => 'required|email',
+    'phone' => 'required|numeric|min:11,max:11',
+        );
+        $validation=Validator::make($req->all(),$rule);
+        if ($validation->fails()) {
+           return $validation->errors();
+        }else{
 //    instance create
 $userCreate=new User();
 $userCreate->name=$req->name;
@@ -23,7 +33,11 @@ if ($userCreate->save()) {
     }else{
         return "User Not Create";
     }
+        }
+
 }
+
+
 // single User fetch
 function singleUser(Request $request){
    $singleUser=User::find($request->id);
