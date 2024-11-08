@@ -19,13 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get("test",function(){
-//     return ["name"=>"kashif","email"=>"abc@gmail.com"];
-// });
-
-
-// Crud Perform
-
 
 // Auth Routing
 Route::post("sigin",[UserAuthController::class,"sigin"]);
