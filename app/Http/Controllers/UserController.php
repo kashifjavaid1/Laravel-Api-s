@@ -62,7 +62,6 @@ function userUpdate(Request $request,$id){
         return "No Update User";
     }
 }
-
 // Delete User 
 // param pass id 
 function DeleteUser($id){
