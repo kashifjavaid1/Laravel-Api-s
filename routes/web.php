@@ -17,8 +17,6 @@ use App\Http\Middleware\ValideUser;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
 Route::get("/sigin",function(){
         return view("sigin");
     })->middleware(ValideUser::class);
