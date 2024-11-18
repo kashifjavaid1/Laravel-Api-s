@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\ValideUser;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
