@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get("/sigin",function(){
         return view("sigin");
     })->middleware(ValideUser::class);
+    Route::get("/sigin",function(){
+        return view("sigin");
+    })->middleware(ValideUser::class);
