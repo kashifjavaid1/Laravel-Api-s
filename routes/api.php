@@ -40,5 +40,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     Route::patch('edit-user/{id}', [UserController::class, 'userUpdate']);
 //     Route::delete('delete/{id}', [UserController::class, 'DeleteUser']);
 //     Route::delete('multiple-delete', [UserController::class, 'MultipleDelete']);
-//     Route::get('search/{name}', [UserController::class, 'searchApi']);
+    Route::get('search/{name}', [UserController::class, 'searchApi']);
 // });
